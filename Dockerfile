@@ -1,9 +1,9 @@
 FROM ubuntu
 
 # install dependencies
-RUN apt apt-get update && apt-get install -y
-RUN apt install openjdk-17-jre-headless -y
-RUN apt install maven -y
+RUN apt-get update && apt-get install -y \
+    openjdk-17-jre-headless \
+    maven
 
 # Setting the working directory
 WORKDIR /app
